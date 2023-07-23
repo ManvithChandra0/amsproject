@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #0b0101;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ color: black;
+}
+
+.about-section h1 {
+  font-size: 48px;
+  margin: 0;
+  line-height: 1.2;
+  color: #000;
+}
+
+.about-section p {
+  font-size: 24px;
+  margin: 30px 0;
+  color: #000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.column {
+  flex-basis: 30%;
+  margin: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+
+.column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.2;
+  color: #333;
+}
+
+.container p {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #666;
+}
+
+.title {
+  color: #999;
+}
+
+.button {
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background-color: #030804;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #030804;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background-image: linear-gradient(to right, #434343 0%, black 100%);
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  z-index: 9999;
+}
+
+
+
+nav ul {
+  text-align: left;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="#">Buy Products </a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="about-section">
+        <h1>Buy Cars</h1>
+  <p>At CarBuyers Inc., we are committed to making the car buying experience as easy and stress-free as possible. We understand that buying a car can be a daunting task, but our team of experts is here to guide you through the process and help you find the perfect vehicle.</p>
+</div>
+
+<h2 style="text-align:center">Cars</h2>
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/audi2.jpg' %}" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Audi</h2>
+          <p>Model Number: Audi A4</p>
+          <b>Price:₹ 50.99 Lakh</b><br></br>
+          <b>Available: Yes</b><br></br>
+          <div style="text-align: center;">
+            <p><a href="{% url 'contact' %}"><button class="button">Book</button></a></p>
+        </div>
+                  </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/benz.jpg' %}" alt="Mike" style="width:100%">
+        <div class="container">
+            <h2>benz</h2>
+            <p>Model Number: C-Class</p>
+            <b>Price:₹ 61.00 Lakh</b><br></br>
+                      <b>Available: YES</b><br></br>
+          <div style="text-align: center;">
+            <p><a href="{% url 'contact' %}"><button class="button">Book</button></a></p>
+
+            </div>
+                  </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/bmw.jpg' %}" alt="John" style="width:100%">
+        <div class="container">
+            <h2>BMW</h2>
+            <p>Model Number: BMW X6</p>
+            <b>Price:₹ 1.11 Crore</b><br></br>
+                      <b>Available: Yes</b><br></br>
+          <div style="text-align: center;">
+            <p><a href="{% url 'contact' %}"><button class="button">Book</button></a></p>
+        </div>
+                  </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

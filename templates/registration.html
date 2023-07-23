@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>AUTO MOBILE MANAGEMENT SYSTEM</title>
+    <style>
+
+
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+h3 {
+  font-size: 24px;
+  color: #6d4c41;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 mark {
+  background-color: #ffe0b2; /* add a light orange background color */
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+}
+label[for="id_gender"] {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select#id_gender {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+}
+
+select#id_gender:focus {
+  outline: none;
+  border-color: #6d4c41;
+}
+label[for="id_contact"] {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input#id_contact {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+}
+
+input#id_contact:focus {
+  outline: none;
+  border-color: #6d4c41;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #6d4c41;
+}
+
+button[type="submit"] {
+  background-color: #6d4c41;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #50362f;
+}
+
+        /* style submit button */
+input[type="submit"] {
+  background-color: #030804; /* replace with your desired color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* style button on hover */
+input[type="submit"]:hover {
+  background-color: #030804; /* replace with your desired color */
+}
+  .register{
+    color: white;
+    text-align: center;
+  }
+
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+
+  .register a:link{
+    text-decoration: none;
+  }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+background-image: linear-gradient(to right, #434343 0%, black 100%);
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  z-index: 9999;
+}
+
+nav ul {
+  text-align: left;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+
+    </style>
+</head>
+<body>
+<header>
+      <nav>
+        <ul>
+          <li><a href="/userlogin">Login</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+
+
+<br><br>
+
+<center>
+<form method="post">
+    {% csrf_token %}
+{{form.as_p}}
+    <br>
+    <input type="submit" value="Register">
+     <p class="register">Already Registered?  <a href="{% url 'userlogin'%}">Login here!</a></p>
+</form>
+</center>
+
+</body>
+</html>

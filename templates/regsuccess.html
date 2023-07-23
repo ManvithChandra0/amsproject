@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>AUTO MOBILE MANAGEMENT SYSTEM</title>
+    <style>
+        body {
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: Arial, sans-serif;
+}
+
+.message {
+    color: red;
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+.button {
+  background-color: #000; /* replace with your desired color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: #000;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    </style>
+
+</head>
+<body>
+    <h2 align="center" class="message">{{msg}}</h2>
+    <button class="button" ><a href="{% url 'userlogin' %}">Go Back To Login page</a></button>
+</body>
+</html>
